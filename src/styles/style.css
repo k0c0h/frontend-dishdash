@@ -1,0 +1,187 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #ffe4ec, #ffd1dc);
+  margin: 0;
+}
+
+h1, h2 {
+  color: #b03060;
+}
+
+.container {
+  padding: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+th {
+  background: #f8a1c4;
+  color: white;
+  padding: 12px;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background: #fff0f5;
+}
+
+input {
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #f3b2c3;
+}
+
+.filter {
+  margin-bottom: 15px;
+  width: 200px;
+}
+
+button {
+  background: #f06292;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  margin: 2px;
+}
+
+button:hover {
+  background: #ec407a;
+}
+
+button.danger {
+  background: #d81b60;
+}
+
+button.danger:hover {
+  background: #ad1457;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff0f5;
+  padding: 25px;
+  border-radius: 15px;
+  width: 350px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal h2 {
+  text-align: center;
+}
+
+.result {
+  background: #ffe4ec;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-secondary {
+  width: 100%;
+  background: #ce93d8;
+  margin-top: 8px;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal.large {
+  max-width: 600px;
+}
+
+.low-stock {
+  color: #d63384;
+  font-weight: bold;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 182, 193, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff0f6;
+  padding: 25px;
+  width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.modal h3 {
+  color: #c2185b;
+}
+
+.modal select,
+.modal input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.sell-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal button {
+  background: #ec407a;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal button.secondary {
+  background: #f8bbd0;
+  color: #880e4f;
+}
