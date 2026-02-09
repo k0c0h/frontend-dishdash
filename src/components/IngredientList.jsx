@@ -11,10 +11,14 @@ export default function IngredientList() {
   return (
     <>
       <h2>List of Ingredient</h2>
-      {ingredients.map(i => (
+      {ingredients.map((i) => (
         <div className="card" key={i._id}>
-          <p><strong>{i.name}</strong></p>
-          <p>Categoría: {i.category}</p>
+          <p>
+            <strong>{i.name}</strong>
+          </p>
+          <p>Categoría: {i.category}</p>\<p>Month: {i.month}</p>
+          <p>Year: {i.year}</p>
+          <p>Day: {i.day}</p>
           <p>Precio base: ${i.price}</p>
           <p>Stock: {i.availableUnits}</p>
         </div>
