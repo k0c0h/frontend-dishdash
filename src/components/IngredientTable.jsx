@@ -73,9 +73,12 @@ export default function IngredientTable() {
       <table>
         <thead>
           <tr>
-            <th>Nombre</th>
+            <th>Name</th>
             <th>Categoría</th>
             <th>Precio</th>
+            <th>Month</th>
+            <th>Year</th>
+            <th>Day</th>
             <th>Precio + IVA</th>
             <th>Stock</th>
             <th>Acciones</th>
