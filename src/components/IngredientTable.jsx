@@ -76,11 +76,11 @@ export default function IngredientTable() {
             <th>Name</th>
             <th>Categoría</th>
             <th>Precio</th>
-            <th>Month</th>
+            <th>Precio + IVA</th>
             <th>Year</th>
+            <th>Month</th>
             <th>Day</th>
             <th>Expiration</th>
-            <th>Precio + IVA</th>
             <th>Stock</th>
             <th>Acciones</th>
           </tr>
@@ -103,7 +103,7 @@ export default function IngredientTable() {
               <td>{i.year ?? ""}</td>
               <td>{i.month ?? ""}</td>
               <td>{i.day ?? ""}</td>
-              <td>{i.expiration ?? `${i.year ?? ""}-${i.month ?? ""}-${i.day ?? ""}`}</td>
+              <td>{i.expiration ?? (i.year && i.month && i.day ? `${i.year}-${String(i.month).padStart(2, '0')}-${String(i.day).padStart(2, '0')}` : "N/A")}</td>
               <td>{i.availableUnits ?? 0}</td>
               <td>
                 <button onClick={() => setSelected(i)}>Vender</button>

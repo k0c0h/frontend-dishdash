@@ -43,7 +43,11 @@ export default function SellIngredientModal({ ingredient, onClose, onSold }) {
 
         {result && (
           <div className="result">
-            <p>Precio unitario con IVA: ${priceWithIva.toFixed(2)}</p>
+            <p>Producto: {result.product}</p>
+            <p>Cantidad: {result.quantity}</p>
+            <p>Precio unitario con IVA: ${Number(result.unitPrice).toFixed(2)}</p>
+            <p>Fecha de expiración: {result.expiration}</p>
+            {result.discountApplied && <p>¡Descuento del 5% aplicado!</p>}
             <p><strong>Total: ${Number(result.total).toFixed(2)}</strong></p>
           </div>
         )}
