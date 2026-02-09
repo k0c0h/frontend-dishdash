@@ -79,6 +79,7 @@ export default function IngredientTable() {
             <th>Month</th>
             <th>Year</th>
             <th>Day</th>
+            <th>Expiration</th>
             <th>Precio + IVA</th>
             <th>Stock</th>
             <th>Acciones</th>
@@ -99,9 +100,10 @@ export default function IngredientTable() {
                 />
               </td>
               <td>${(i.price * (1 + IVA)).toFixed(2)}</td>
-              <td>${(i.year)}</td>
-              <td>${(i.month)}</td>
-              <td>${(i.day)}</td>
+              <td>{i.year ?? ""}</td>
+              <td>{i.month ?? ""}</td>
+              <td>{i.day ?? ""}</td>
+              <td>{i.expiration ?? `${i.year ?? ""}-${i.month ?? ""}-${i.day ?? ""}`}</td>
               <td>{i.availableUnits ?? 0}</td>
               <td>
                 <button onClick={() => setSelected(i)}>Vender</button>
